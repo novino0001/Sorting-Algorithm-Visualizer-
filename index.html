@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+ 
+ 
+
+
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssfile.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Sorting Visualizer</title>
+</head>
+<body>
+    <div class="container">
+        <div id="array-container">
+            <div id="array">
+                <div id="e0" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 24px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e1" class="element"
+                    style="background-color:rgb(78, 141, 160); width: 44px; height: 31px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e2" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 68px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e3" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 74px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e4" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 97px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e5" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 128px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e6" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 139px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e7" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 143px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e8" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 152px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e9" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 153px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e10" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 163px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e11" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 167px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e12" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 177px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e13" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 179px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e14" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 198px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e15" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 202px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e16" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 221px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e17" class="element"
+                    style="background-color:  rgb(78, 141, 160); width: 44px; height: 250px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e18" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 299px; margin-left: 1px; margin-right: 1px;">
+                </div>
+                <div id="e19" class="element"
+                    style="background-color: rgb(78, 141, 160); width: 44px; height: 300px; margin-left: 1px; margin-right: 1px;">
+                </div>
+            </div>   <h5 id="no-algo-warning" class="display-none">No Algorithm Selected!</h5>
+        </div>
+        <div id="algo-container">
+            <button class="algo-btn algo-btn-active">Bubble Sort</button>
+            <button class="algo-btn">Selection Sort</button>
+            <button class="algo-btn">Insertion Sort</button>
+            <button class="algo-btn">Merge Sort</button>
+            <button class="algo-btn">Quicksort</button>
+            <button class="algo-btn">Heapsort</button>
+            <button id="sort">Sort</button>
+            <button id = "stop">Stop</button>
+            <button id = "pause">Play</button>
+        </div>
+        <div id="change-container">
+            <button id="randomize">Randomize</button>
+            <div id="sliders">
+                <div class="slider-container">
+                    <label>Array Size</label>
+                    <input type="range" id="size-slider" class="slider" autocomplete="off" min="4" max="64" value="32">
+                </div>
+                <div class="slider-container">
+                    <label>Speed</label>
+                    <input type="range" id="speed-slider" class="slider" autocomplete="off" min="1" max="4" value="3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="bubble-sort.js"></script>
+    <script src="selection-sort.js"></script>
+    <script src="insertion-sort.js"></script>
+    <script src="merge-sort.js"></script>
+    <script src="quicksort.js"></script>
+    <script src="heapsort.js"></script>
+
+
+</body></html>
