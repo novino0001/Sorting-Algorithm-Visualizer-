@@ -89,18 +89,7 @@ body {
 }
 
 
-#stop {
-    float: right;
-    background-color: mediumspringgreen;
-    color: black;
-}
-#stop:hover, #randomize:hover {
-    opacity: 0.8;
-}
-
-#stop:disabled, #randomize:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+ 
 }
 #change-container {
     max-width: 500px;
